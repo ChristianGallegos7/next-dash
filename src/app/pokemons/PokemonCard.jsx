@@ -17,12 +17,12 @@ export default function PokemonCard({ pokemon }) {
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-50"></div>
       </div>
       <div className="p-6 pt-4 flex flex-col items-center gap-4">
-        <button
+        <Link
+          href={`/dashboard/pokemones/pokemon/${pokemon.id}`}
           className="block w-full select-none bg-gray-600 py-2 px-6 text-center font-sans text-lg font-semibold text-white shadow-sm transition-all hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 capitalize"
-          type="button"
         >
           {pokemon.name}
-        </button>
+        </Link>
         <Link href="/dashboard/pokemons" className="flex items-center gap-2 text-gray-400 hover:text-gray-300 transition-all">
           <IoHeartOutline size={24} className="text-red-600"/>
           <span className="text-lg font-medium">No es favorito</span>
